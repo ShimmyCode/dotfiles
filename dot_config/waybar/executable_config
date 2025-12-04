@@ -4,7 +4,7 @@
         "reload_style_on_change": true,
         "modules-left": ["custom/notification","clock","custom/pacman","tray"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["group/expand","wireplumber#source","wireplumber","bluetooth","network","battery"],
+        "modules-right": ["group/expand","wireplumber#source","custom/volume","bluetooth","network","battery"],
 
 
         "hyprland/workspaces": {
@@ -128,20 +128,28 @@
             "icon-size": 14,
             "spacing": 10
         },
-	//audio config
-	"wireplumber": {
+	//audio config(old)
+/*	"wireplumber": {
     	    "format": "{icon} {volume}%",
     	    "format-muted": "",
-    	    "max-volume":100,
+    	    //"max-volume":"100",
 	    "on-click": "helvum",
  	    "format-icons": ["", "", ""]
-	},
+	},*/
+	// new audio config
+	"custom/volume": {
+   		"format": "{}", // <-- Use "{}" to display the script's output
+    		"exec": "~/.config/hypr/scripts/waybar-volume.sh",
+	    	"interval": 1,                      // Check volume every second
+    		"on-click": "helvum",
+		"signal": 10
+},
 	"wireplumber#source": {
     	    "node-type": "Audio/Source",
     	    "format": "󰍬{volume}%",
     	    "format-muted": "󰍭",
     	    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-    	    "scroll-step": 5,
+    	    "scroll-step": 1,
 	},
 } 
 
