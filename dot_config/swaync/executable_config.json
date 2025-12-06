@@ -22,7 +22,7 @@
     "timeout-critical": 1,
     "fit-to-screen": true,
     "keyboard-shortcuts": true,
-    "image-visibility": "when available",
+    "image-visibility": "when-available",
     "transition-time": 200,
     "hide-on-clear": false,
     "hide-on-action": true,
@@ -31,7 +31,7 @@
         "mpris",
         "title",
         "notifications",
-        "volume",
+        "volume#output", 
         "backlight",
         "buttons-grid"
     ],
@@ -50,7 +50,7 @@
             "image-size": 80,
             "image-radius": 0
         },
-        "volume": {
+        "volume#output": {
             "label": "󰕾 "
         },
         "backlight": {

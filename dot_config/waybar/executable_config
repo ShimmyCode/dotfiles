@@ -141,7 +141,7 @@
    		"format": "{}", // <-- Use "{}" to display the script's output
     		"exec": "~/.config/hypr/scripts/waybar-volume.sh",
 	    	"interval": 1,                      // Check volume every second
-    		"on-click": "helvum",
+    		"on-click": "pwvucontrol",
 		"signal": 10
 },
 	"wireplumber#source": {
